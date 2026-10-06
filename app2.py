@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestRegressor
 def Get_Mae(max_leafs):
     
   
-    train_X,val_X,train_y,val_y=TTS(X,y,random_state=1)
+   
 
     
     Utr_Burnout_Model=RandomForestRegressor(max_leaf_nodes=max_leafs,random_state=1)
@@ -43,6 +43,8 @@ print(y)
 X=Burnout_Data.iloc[:, 1:-1]
 
 print(X)
+
+train_X,val_X,train_y,val_y=TTS(X,y,random_state=1)
 
 #USER action
 is_mae_acceptable=False
